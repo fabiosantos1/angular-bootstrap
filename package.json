@@ -1,0 +1,26 @@
+{
+  "name": "angular-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --history-api-fallback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiosantos1/angular-sass.git"
+  },
+  "author": "Fabio santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabiosantos1/angular-sass/issues"
+  },
+  "homepage": "https://github.com/fabiosantos1/angular-sass#readme",
+  "dependencies": {
+    "angular": "^1.6.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

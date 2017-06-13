@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "FaleMuito 30",
+      "time": 30
+    },
+    {
+      "id": 2,
+      "name": "FaleMuito 60",
+      "time": 60
+    },
+    {
+      "id": 3,
+      "name": "FaleMuito 120",
+      "time": 120 
+    },
+    {
+      "id": 4,
+      "name": "Normal",
+      "time": 0
+    }
+  ]  
+}

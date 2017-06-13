@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app" class="container" ng-app="app" ng-controller="generalController">
+      <div class="row">
+        <div class="col-12">
+          <h3>Cálculo de tarifas telefônicas</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- Get the calc params -->
+          <form ng-submit="showResult()">
+              <div class="row form-group">
+                <div class="col-sm-4">
+                  <label>Origem:</label>
+                  <select class="form-control" ng-model="calc.origin" required>
+                    <option value="" hidden>Escolha a origem</option>
+                    <option ng-repeat="call in calls" value="{{call.ddd}}">{{call.ddd}}</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label>Destino:</label>
+                  <select class="form-control" ng-model="calc.target" required>
+                    <option value="" hidden>Escolha o destino</option>
+                    <option ng-repeat="call in calls" value="{{call.ddd}}">{{call.ddd}}</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label>Tempo:</label>
+                  <input type="number" class="form-control" ng-model="calc.time" required />
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-12 text-right">
+                  <button type="button" ng-click="clear()" class="btn btn-default">Limpar</button>
+                  <button type="submit" class="btn btn-primary">Calcular</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+      <div class="row" ng-show="result">
+        <!-- Show the Calc result -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Plano</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="resultPrice in resultPrices">
+              <td>{{resultPrice.plan}}</td>
+              <td>{{resultPrice.price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

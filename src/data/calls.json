@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "ddd": 11,
+      "name": "São Paulo",
+      "target": [
+        {
+          "ddd": 16,
+          "tax": 1.90
+        },
+        {
+          "ddd": 17,
+          "tax": 1.70
+        },
+        {
+          "ddd": 18,
+          "tax": 0.90
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ddd": 16,
+      "name": "Ribeirão Preto",
+      "target": [
+        {
+          "ddd": 11,
+          "tax": 2.90
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ddd": 17,
+      "name": "Mirassol",
+      "target": [
+        {
+          "ddd": 11,
+          "tax": 2.70
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ddd": 18,
+      "name": "Tupi Paulista",
+      "target": [
+        {
+          "ddd": 11,
+          "tax": 1.90
+        }
+      ]
+    }
+  ]
+}
